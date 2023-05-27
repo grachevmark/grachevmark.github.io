@@ -1,0 +1,744 @@
+/*-------------------------------------------Общие стили------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "OpenSans", sans-serif;
+    font-weight: 400;
+}
+
+li {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.decoration {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.title {
+    text-align: center;
+}
+
+.input__fields {
+    height: 100%;
+    padding: 15px 17px 20px;
+    border: none;
+    background-color: #f4f7f6;
+    border-radius: 0;
+    outline: none;
+}
+
+.button__style {
+    background-color: #b59f5b;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    outline: #b59f5b;
+}
+
+.input__fields:focus {
+    border: 1px solid #b59f5b;
+}
+
+.button__style:hover {
+    background-color: #323232;
+} 
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus, textarea:focus, input:focus {
+        font-size: 16px;
+    }
+}
+
+/*---------------------------------------Ограничение ширины-------------------------------*/
+
+.width, .wrp__trend {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*------------------------------------------Header-----------------------------------------*/
+
+    .header {
+        display: flex;
+    }
+
+    .banner {
+        width: 100%;
+        background-image: url(../images/banner-mobile.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .banner::after {
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .wrp__header {
+        position: relative;
+        z-index: 2;
+
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
+    .btn__list {
+        width: 23px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .btn__list:nth-child(1n+1) {
+        margin-top: 4px;
+    }
+
+
+    .menu__list {
+        display: none;
+    }
+
+    .logo__mobail {
+
+        width: 81%;
+        margin: 173px auto 44px;
+    }
+
+    .main__text {
+        font-size: 26px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 187px;
+    }
+
+
+    /*----------------------------------------------trends---------------------------------------*/
+
+    .trends__section {
+        margin-top: 12px;
+    }
+
+    .title__group {
+        margin-bottom: 40px;
+    }
+
+    .title__text {
+        font-size: 16px;
+    }
+
+    .line::after {
+        content: "";
+        display: block;
+        margin: 12px auto 0;
+        width: 67px;
+        height: 3px;
+        background-color: #e1d9bd;
+    }
+
+    .trends {
+        padding: 88px 15px 16px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-top: 3px;
+    }
+
+    .trends::after {
+        content: "";
+        display: block;
+        background-color: black;
+        position: absolute;
+        opacity: 0.6;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .trend__card {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card__one {
+        background-image: url(../images/trend1.jpg);
+    }
+
+    .card__two {
+        background-image: url(../images/trend2.jpg);
+    }
+
+    .card__three {
+        background-image: url(../images/trend3.jpg);
+    }
+
+    .card__four {
+        background-image: url(../images/trend4.jpg);
+    }
+
+    .trend__info {
+        border: 3px solid #b59f5b;
+        padding: 31px 30px 22px;
+    }
+
+    .tag__block {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    .tag a {
+        box-sizing: border-box;
+        color: #b59f5b;
+        margin-right: 16px; 
+    }
+
+    .tag__text{
+        color: #ffffff;
+        font-size: 16px;
+        box-sizing: content-box;
+    }
+
+    /*----------------------------------------------main---------------------------------------*/
+
+    .wrapper {
+        margin-top: 44px;
+    }
+
+    .post__card {
+        padding-bottom: 24px;
+    }
+
+    .post__card:nth-child(1n+2) {
+        padding-top: 34px;
+        border-bottom: 3px solid #eeeeee;
+    }
+
+    .img__post {
+        width: 100%;
+    }
+
+    .post__tags {
+        margin-top: 16px;
+    }
+
+    .post__title {
+        font-size: 16px;
+    }
+
+    .author {
+        display: flex;
+        font-size: 12px;
+        margin-top: 24px;
+        margin-bottom: 21px;
+    }
+
+    .time__post {
+        color: #888888;
+        margin-right: 15px;
+    }
+
+    .name__author {
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .post {
+        font-size: 14px;
+    }
+
+    .second__paragraph {
+        margin-top: 35px;
+    }
+
+    /*----------------------------------------------aside---------------------------------------*/
+
+    .aside {
+        padding-top: 44px;
+    }
+
+    .new__title {
+        padding-bottom: 45px;
+    }
+
+    .new__posts {
+        display: flex;
+        margin-bottom: 21px;
+    }
+
+    .new__img {
+        max-width: 70px;
+        margin-right: 20px;
+    }
+
+    .time__new {
+        font-size: 12px;
+        line-height: 0%;
+    }
+
+    .title__new {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .search__block {
+        display: flex;
+        margin-top: 40px;
+        width: 100%;
+        height: 48px;
+    }
+
+    .input__search {
+        width: calc(100% - 48px);
+        font-size: 16px; 
+    }
+
+    .search__button {
+        width: 48px;
+        height: 100%;
+        background-image: url(../svg/search.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        
+    }
+
+    /*---------------------------------------------Рассылка---------------------------------------*/
+
+    .newsletter {
+        padding: 44px 0 44px ;
+    }
+
+    .newsletter__title {
+        margin-bottom: 40px;
+    }
+
+    .letter__mail {
+        width: 100%;
+        margin-bottom: 18px;
+        font-size: 16px; 
+    }
+
+    .letter__button {
+        width: 100%;
+        height: 50px;
+        color: #ffffff;
+    }
+
+    /*---------------------------------------------Теги---------------------------------------*/
+
+    .block__tags {
+        margin-top: 41px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tags__list {
+        border: 3px solid #eeeeee;
+        padding: 7px 10px;
+        font-size: 12px;
+        margin-right: 5px;
+        margin-bottom: 6px;
+        outline: none;
+    }
+
+    .tags__list:hover {
+        border: 3px solid #b59f5b;
+    }
+
+    .tags__list:focus {
+        border: 3px solid #b59f5b;
+    }
+
+    /*---------------------------------------------Темы---------------------------------------*/
+
+    .topics {
+        margin-top: 44px;
+    }
+
+    .topics__section {
+        margin-top: 44px;
+    }
+
+    .topics__list {
+        font-weight: 700;
+        font-size: 14px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .quantity {
+        font-size: 12px;
+        color: #b59f5b;
+        vertical-align: super;
+    }
+
+    .topics__list:nth-child(1n+2) {
+        margin-top: 21px;
+    }
+
+    /*---------------------------------------------Наши изделия---------------------------------------*/
+
+    .our__products {
+        font-size: 16px;
+        margin-top: 44px;
+        margin-bottom: 44px;
+    }
+
+    .wrp__shop {
+        padding: 0 23px;
+        position: relative;
+        
+    }
+
+
+    .products__block::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 3px solid #b59f5b;
+        z-index: 1;
+        right: -4px;
+        left: -4px;
+        bottom: -4px;
+        top: 254px;
+    }
+
+    .wrp__shop:nth-child(1n+2) {
+        margin-top: 23px;
+    }
+
+    .img__shop {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product__title {
+        font-size: 17px;
+        margin-top: 25px;
+    }
+
+    .prod__text {
+        font-size: 15px;
+        margin-top: 9px;
+    }
+
+    .link__decor {
+        color: #b59f5b;
+        text-decoration: underline;
+    }
+
+    .product__offer {
+        display: flex;
+        justify-content: space-between;
+        vertical-align: baseline;
+        margin-top: 24px;
+        padding-bottom: 37px;
+    }
+
+    .price__prod {
+        font-weight: 700;
+    }
+
+    .old__price {
+        text-decoration: line-through;
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .button__offer {
+        width: 140px;
+        height: 49px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+
+    /*---------------------------------------------Футер---------------------------------------*/
+
+    .social {
+        width: 100%;
+        height: 83px;
+        padding: 31px auto;
+        background-color: #f4f7f6;
+        display: flex;
+        justify-content: center;
+        margin-top: 43px;
+
+    }
+
+    .social__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 110px;
+    }
+
+    .links {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link__one {
+        background-image: url(../svg/001-dribbble.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-size: 20px 20px;
+    }
+    .link__twoo {
+        background-image: url(../svg/002-pinterest.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-size: 20px 20px;
+    }
+    .link__three {
+        background-image: url(../svg/003-tumblr.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-size: 20px 20px;
+    }
+
+    .copiright__block {
+        margin: 50px auto 50px;
+    }
+
+    .copiright {
+        color: #999999;
+        font-size: 12px;
+        text-align: center;
+    }
+
+@media screen and (min-width: 641px)  {
+
+    .title {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .main__text {
+        font-size: 40px;
+    }
+
+    .banner {
+        background-image: url(../images/banner-bg-tablet.jpg);
+    }
+
+    .wrp__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 43px;
+    margin-bottom: 105px;
+    }
+
+    .logo__mobail {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+        width: 159px;
+        
+    }
+
+    .menu{
+        margin-top: 0;
+    }
+
+    .wrp__trend {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .width {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .trends {
+        width: calc(50% - 2px);
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main {
+        width: calc(100% - 307px);
+    }
+
+    .aside {
+        width: 272px;
+    }
+    
+    .shop__wrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .wrp__shop {
+        width: calc(50% - 11.5px);
+        padding: 0 21px;
+        margin-bottom: 28px;
+        max-width: 337px;
+    }
+
+    .wrp__shop:nth-child(1n+2) {
+        margin-top: 0;
+    }
+
+    .products__block::after {
+        top: 193px;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+
+        .main__text {
+        font-size: 45px;
+        margin-bottom: 147px;
+        }
+    
+        .banner {
+        background-image: url(../images/banner-bg.jpg);
+        }
+
+        .btn__close {
+            display: none;
+        }
+
+        .menu__list {
+            display: flex;   
+        }
+
+        .list__items {
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .list__items:nth-child(1n+2) {
+            margin-left: 35px;
+        }
+
+        .wrp__menu{
+            margin-top: 34px;
+            margin-bottom: 126px;
+            }
+    
+        .width {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .trends {
+            width: calc(25% - 2px);
+        }
+    
+        .main {
+            width: calc(100% - 307px);
+        }
+
+        
+        .wrp__shop {
+            width: calc(50% - 11.5px);
+            padding: 0 21px;
+            margin-bottom: 28px;
+            max-width: 337px;
+        }
+
+        .post__card {
+            display: flex;
+        }
+
+        .post__card:nth-child(1n+2) {
+            padding-top: 59px;
+            border-bottom: none;
+        }
+    
+        .post__img {
+            margin-right: 31px;   
+        }
+
+        .img__post {
+            width: 382px;
+        }
+
+        .posts {
+            box-sizing: content-box;
+        }
+    }
+
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+        .trends {
+            width: calc(50% - 2px);
+        }
+    
+    }
+    
+    @media screen and (max-width: 1200px) and (orientation: landscape) {
+        .trends {
+            width: calc(25% - 2px);
+        }
+    
+    }
